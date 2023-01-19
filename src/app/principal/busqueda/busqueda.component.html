@@ -1,0 +1,31 @@
+<h2>Busqueda de usuarios</h2>
+<section class="container-sm">
+<section class="form-group">
+<label for="id">Ingrese ID: </label>
+<input type="text" #txtIdUser>
+<input type="button" value="Buscar" (click)="getUserID(txtIdUser.value)">
+</section>
+<ng-container class="form-group" *ngIf="!vista">
+<section *ngIf="!resultado">
+Usuario no encontrado!!
+</section>
+<ng-container *ngIf="resultado">
+<table class="table table-hover">
+<thead>
+<tr>
+<th>ID</th>
+<th>Nombre</th>
+<th>Usuario</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngIf="user">
+<td>{{ user.id }}</td>
+<td>{{ user.name }}</td>
+<td>{{ user.username }}</td>
+</tr>
+</tbody>
+</table>
+</ng-container>
+</ng-container>
+</section>

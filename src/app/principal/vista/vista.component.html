@@ -1,0 +1,19 @@
+<h2 class="text-center">Lista de Albums</h2>
+<section class="container-sm">
+<table class="table table-hover table-bordered table-striped">
+<thead class="table-dark">
+<tr class="">
+<th scope="col" class="text-center">UserId</th>
+<th scope="col" class="text-center">ID</th>
+<th scope="col" class="text-center">Title</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let item of listado">
+<td class="text-center">{{ item.userId }}</td>
+<td class="text-center">{{ item.id }}</td>
+<td class="text-center">{{ item.title }}</td>
+</tr>
+</tbody>
+</table>
+</section>
